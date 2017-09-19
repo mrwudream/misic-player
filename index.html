@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link href="https://cdn.bootcss.com/jquery-mobile/1.4.4/jquery.mobile.min.css" rel="stylesheet">
+    <style>
+        body{
+            font-family: "SimSun", "宋体";
+            font-weight: 100;
+        }
+
+        img{
+            width: 100%;
+        }
+        #page1{
+            background:url("imgs/yy.jpg") no-repeat;
+            background-size: cover;
+        }
+        .pic>div{
+            width: 100%;
+            border-bottom: 2px solid #f0ad4e;
+            position: relative;
+            top: -0.3rem;
+        }
+        .pic>div>span{
+            width: 0.9rem;
+            height: 0.9rem;
+            border-radius: 50%;
+            position: absolute;
+            top: -0.35rem;
+            background-color: #aa2892;
+            left: 0;
+            /*left: 97%;*/
+        }
+        .mas0{
+            width: 100%;
+            text-align: center;
+            color: whitesmoke;
+            margin-top: 2rem;
+            font-family:"宋体";
+            font-weight: 100;
+            text-shadow: 0 0 0 rgba(243, 243, 243, 0);
+        }
+
+        .contr{
+            width: 100%;
+        }
+        .contr>div{
+            width:33.3%;
+            height: 4.5rem;
+            float: left;
+           text-align: center;
+        }
+        .contr>div>span{
+            width: 2.5rem;
+            height: 2.5rem;
+            display: block;
+            margin: 1rem auto;
+        }
+        .contr>div:nth-of-type(1)>span{
+            background:url("button/1 (4).png") no-repeat;
+            background-size: cover;
+
+        }
+        .contr>div:nth-of-type(2)>span{
+            background:url("button/1 (15).png") no-repeat;
+            background-size: cover;
+
+        }
+        .contr>div:nth-of-type(3)>span{
+            background:url("button/1 (7).png") no-repeat;
+            background-size: cover;
+
+        }
+
+    </style>
+</head>
+<body>
+<!--首页开始-->
+<div data-role="page" id="page1">
+    <div data-role="header" data-position="fixed" data-theme="b" >
+        <a href="#page2" data-icon="back" style="border-radius: 2.9rem;padding: 16px;"></a>
+        <h3 class="ttou"></h3>
+    </div>
+    <div data-role="contend" class="bod">
+        <audio src="" autoplay></audio>
+        <div class="pic">
+            <img src="imgs/timg.jpg" alt=""/>
+            <div>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="mas0">
+            <h3>远走高飞</h3>
+            <h5>金志文</h5>
+        </div>
+    </div>
+    <div data-role="footer"  data-position="fixed" style="background-color: rgba(0, 0, 0, 0.45)">
+        <div class="contr">
+            <div class="pre"><span></span></div>
+            <div class="pause"><span></span></div>
+            <div class="nex"><span></span></div>
+        </div>
+    </div>
+</div>
+<!--首页结束-->
+
+<!--歌单详情页开始-->
+<div data-role="page" data-theme="b" id="page2">
+    <div data-role="header" data-position="fixed">
+        <a href="#page1" data-icon="back" style="border-radius: 2.9rem;padding: 16px;"></a>
+        <h3>歌曲列表</h3>
+    </div>
+    <div data-role="contend">
+        <ul data-role="listview" class="slist">
+            <!--<li data-icon="o"><a href=""><img src="imgs/timg.jpg" alt=""/><h3>王菲 2001</h3><p>王菲 /2001/ 中国唱片 上海公司</p></a></li>-->
+        </ul>
+    </div>
+    <div data-role="footer"  data-position="fixed">
+        <div data-role="navbar">
+            <ul>
+                <li class="pre"><a href="">上一曲</a></li>
+                <li class="pp"><a href="">播放</a></li>
+                <li class="ss"><a href="">暂停</a></li>
+                <li class="nex"><a href="">下一曲</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--歌单详情页结束-->
+</body>
+<script src="../../../jquerymin.js"></script>
+<script src="https://cdn.bootcss.com/jquery-mobile/1.4.4/jquery.mobile.min.js"></script>
+<script>
+    $(function(){
+        var music=[
+            {
+                src:'http://dl.stream.qqmusic.qq.com/C4000027zPYs3A9fyb.m4a?vkey=7045C8FB1EE3B0587441D4A0175E31A3FCCA4C1F041D5EE738D119FA9CECA3E96315410503C03E3BA5C5812E582153FBB1909D167342FF49&guid=7353299760&uin=0&fromtag=66',
+                pic:'https://y.gtimg.cn/music/photo_new/T002R300x300M000004U936F0HXo1B.jpg?max_age=2592000',
+                song:'远走高飞',
+                name:'金志文'
+            },{
+                src:'http://dl.stream.qqmusic.qq.com/C400001hwLQi3sUBnL.m4a?vkey=FBA7005729582219AA43D16E5125A0BAED30EEB37A9E747897FCF41E832280FEBC2D2CE7EB37EF20B1F778EDD72BE03672F74FBBB1969B60&guid=7353299760&uin=0&fromtag=66',
+                pic:'https://y.gtimg.cn/music/photo_new/T002R300x300M000003lBCl74Fspmo.jpg?max_age=2592000',
+                song:'九张机',
+                name:'叶炫清'
+            },{
+                src:'http://dl.stream.qqmusic.qq.com/C400000FR5GV0lwW18.m4a?vkey=D0EC9F5450DE049B22A2D0CC3DF2605E47A1D2C0773AE1CCA349107422F6172E04CE53A24C940D5E5A6733093FBB19BC0C2C7DC067C3E7D3&guid=7353299760&uin=0&fromtag=66',
+                pic:'https://y.gtimg.cn/music/photo_new/T002R300x300M000000jE4g74VS43p.jpg?max_age=2592000',
+                song:'成都',
+                name:'赵雷'
+            },{
+                src:'http://dl.stream.qqmusic.qq.com/C400003jX9iw0DCQY3.m4a?vkey=3EB3E74130950CBF6566D60F4DD124B890AE46DCB0E41F0CB0BB1ABCD5B1373B0E592DB8BAA94D7D8505B4CD7ABF8F52E2294C318F37F1E2&guid=7353299760&uin=0&fromtag=66',
+                pic:'https://y.gtimg.cn/music/photo_new/T002R300x300M000002qBBpu2q0vL3.jpg?max_age=2592000',
+                song:'刚好遇见你',
+                name:'李玉刚'
+            }];
+        var audio = document.querySelector('audio');
+        var index=0;
+        var str='';
+
+        for(var st=0;st<music.length;st++){
+            str+=' <li data-icon="o"><a href=""><img src="'+music[st].pic+'" alt=""/><h3>'+music[st].song+'</h3><p>'+music[st].name+'</p></a></li>'
+        }
+        $('.slist').html(str);
+        function plff(index){
+            $('audio').attr('src',music[index].src);
+            $('.pic>img').attr('src',music[index].pic);
+            $('.mas0>h3').html(music[index].song);
+            $('.ttou').html(music[index].song);
+            $('.mas0>h5').html(music[index].name);
+        }
+        plff(index);
+//        下一曲
+        $('.nex').on('tap',function(){
+            $('.contr>div:nth-of-type(2)>span').css({ 'background':'url("button/1 (15).png")  no-repeat','background-size':'cover'});
+            index++;
+            index=index>3 ? 0:index;
+            plff(index);
+        });
+
+//        上一曲
+        $('.pre').on('tap',function(){
+            $('.contr>div:nth-of-type(2)>span').css({ 'background':'url("button/1 (15).png")  no-repeat','background-size':'cover'});
+            index--;
+            index=index<0 ? 3:index;
+            plff(index);
+        });
+
+//        暂停
+        $('.pause').on('tap',function(){
+            if(!audio.paused){
+                audio.pause();
+                $('.contr>div:nth-of-type(2)>span').css({ 'background':'url("button/1 (14).png")  no-repeat','background-size': 'cover'});
+            }else{
+                audio.play();
+                $('.contr>div:nth-of-type(2)>span').css({ 'background':'url("button/1 (15).png")  no-repeat','background-size':'cover'});
+            }
+        });
+
+//        page2 暂停播放
+        //        暂停
+        $('.ss').on('tap',function(){
+            if(!audio.paused){
+                audio.pause();
+                $('.contr>div:nth-of-type(2)>span').css({ 'background':'url("button/1 (14).png")  no-repeat','background-size': 'cover'});
+            }
+        });
+        $('.pp').on('tap',function(){
+            if(audio.paused){
+                audio.play();
+                $('.contr>div:nth-of-type(2)>span').css({ 'background':'url("button/1 (15).png")  no-repeat','background-size': 'cover'});
+            }
+        });
+//      歌单选歌
+        $('.slist>li').on('tap',function(){
+            index=$(this).index();
+            plff($(this).index());
+        });
+
+        $('audio').on('timeupdate',function() {
+            //        进度
+            var let0 = (audio.currentTime / audio.duration) * 97;
+            $('.pic>div>span').css({'left': let0 + '%'});
+
+            //            进度修改
+            $('.pic>div').on('tap', function (e) {
+                audio.currentTime = audio.duration * (e.offsetX /$('.pic>div').width());
+            });
+
+            $('audio').on('ended',function () {
+                if(audio.ended){
+                    index++;
+                    index=index>3 ? 0:index;
+                    plff(index);
+                }
+            })
+
+        })
+
+    })
+
+</script>
+
+</html>
